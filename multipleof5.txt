@@ -1,0 +1,14 @@
+function sort(n)
+{
+var arr=[]
+for(i=1;i<=n;i++){
+if(i%5==0)
+{
+arr.push(i)
+}
+}
+console.log(arr)
+}
+
+n=100
+sort(n)

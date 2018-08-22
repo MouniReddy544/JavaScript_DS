@@ -1,0 +1,23 @@
+function selection(){
+
+for(i=0;i<n.length;i++){
+min = i;
+for(j=i;j<n.length;j++)
+{
+if(n[min]>n[j]){
+min=j;
+}
+
+}
+var temp =n[min]
+n[min]=n[i]
+n[i]=temp
+
+}
+
+console.log(n)
+
+}
+
+n=[3,2,7,5,8];
+selection();

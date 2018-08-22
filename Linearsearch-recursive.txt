@@ -1,0 +1,29 @@
+
+
+function sample(n,search,i)
+{
+if(i > n.length)
+{
+console.log("element not found")
+return 
+}
+
+if(n[i] == search)
+{
+console.log("element found")
+return
+}
+sample(n,search,i+1)
+}
+
+
+
+
+
+
+n=[1,2,3,4]
+search=3
+sample(n,search,0)
+
+
+

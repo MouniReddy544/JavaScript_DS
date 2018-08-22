@@ -1,0 +1,15 @@
+function prime(x){
+
+i=2;
+while(i<x){
+if(x%i==0){
+console.log("it is not a prime" +x);
+return
+}
+
+i=i+1;
+}
+console.log("its a prime")
+}
+var x=4;
+prime(x);
