@@ -1,0 +1,15 @@
+var a="Mounika"
+var b="Mounika is a intelligent girl"
+var c="mounika is good girl"
+var d="Mounika is beautiful"
+
+
+var e=[1,2,3,4,5]
+console.log(d)
+d[1]='k'
+console.log(d)
+c="";
+for(i=d.length-1;i>=0;i--){
+c=c+d[i]
+console.log(c)
+}

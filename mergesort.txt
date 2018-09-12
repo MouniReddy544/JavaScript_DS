@@ -1,0 +1,80 @@
+
+function merge(a,low,mid,high)
+{
+
+var size1=mid-low+1;
+var size2=high-mid;
+var b=new Array(size1)
+var c=new Array(size2)
+
+
+for(i=0;i<size1;i++)
+b[i]=a[low+i]
+
+for(j=0;j<size2;j++)
+c[j]=a[mid+1+j]
+
+
+x=0
+y=0
+k=low
+while(x<size1 && y<size2)
+{
+if(b[x]<c[y])
+{
+a[k]=b[x]
+k=k+1;
+x=x+1;
+}
+else if(c[y] < b[x])
+{
+a[k]=c[y]
+y=y+1
+k=k+1
+}
+else if(c[y] == b[x])
+{
+a[k]=c[y]
+k=k+1
+a[k]=b[x]
+k=k+1
+x=x+1
+y=y+1
+}
+}
+
+while(x < size1)
+{
+a[k]=b[x]
+x=x+1
+k=k+1
+}
+
+while(y < size2)
+{
+a[k]=c[y]
+y=y+1
+k=k+1
+}
+
+console.log(a)
+}
+
+function mergesort(a,low,high)
+{
+if( low < high)
+{
+mid=(low+high)/2
+mid=Math.floor(mid)
+mergesort(a,low,mid);
+mergesort(a,mid+1,high)
+merge(a,low,mid,high)
+
+}
+
+}
+
+a =[1,0,9,3,5]
+mergesort(a,0,a.length-1)
+
+console.log("ITs"+a)

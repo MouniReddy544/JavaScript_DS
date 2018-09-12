@@ -1,0 +1,24 @@
+function intersection(){
+
+low=0;
+high=a.length;
+var median;
+if(high%2!=1){
+mid=(low+high)/2;
+mid=Math.floor(mid);
+median = (a[mid]+a[mid+1])/2;
+}
+
+else if(high%2==1){
+mid=(low+high)/2;
+mid=Math.floor(mid);
+median = a[mid];
+}
+
+console.log(median);
+
+}
+a=[1,2,3,4,5];
+intersection();
+
+if odd mid or even mid,mid+1 
