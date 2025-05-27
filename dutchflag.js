@@ -23,7 +23,8 @@ k=k+1
 }
 
 console.log(arr)
-
+console.log(are)
+console.log(ary)
 
 }
 n=[1,0,2,0,0,1];
